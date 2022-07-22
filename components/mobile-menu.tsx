@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { motion, SVGMotionProps, Variants } from "framer-motion";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from 'react';
+import { motion, SVGMotionProps, Variants } from 'framer-motion';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 interface Props extends SVGMotionProps<SVGElement> {
   isOpen: boolean;
@@ -13,39 +13,39 @@ const HamburgerMenu: React.FC<Props> = ({ isOpen, ...props }) => {
   const top: Variants = {
     closed: {
       rotate: 0,
-      translateY: 0,
+      translateY: 0
     },
     open: {
       rotate: -45,
-      translateY: 2,
-    },
+      translateY: 2
+    }
   };
   const middle: Variants = {
     closed: {
-      opacity: 1,
+      opacity: 1
     },
     open: {
       opacity: 0,
-      transition: { duration: 0.2 },
-    },
+      transition: { duration: 0.2 }
+    }
   };
   const bottom: Variants = {
     closed: {
       rotate: 0,
-      translateY: 0,
+      translateY: 0
     },
     open: {
       rotate: 45,
-      translateY: -2,
-    },
+      translateY: -2
+    }
   };
 
   const lineProps: SVGMotionProps<SVGLineElement> = {
     strokeWidth: 1.3,
-    vectorEffect: "non-scaling-stroke",
-    initial: "closed",
-    animate: isOpen ? "open" : "closed",
-    transition: { type: "spring", stiffness: 400, damping: 20 },
+    vectorEffect: 'non-scaling-stroke',
+    initial: 'closed',
+    animate: isOpen ? 'open' : 'closed',
+    transition: { type: 'spring', stiffness: 400, damping: 20 }
   };
 
   const unitHeight = 6;
@@ -61,7 +61,7 @@ const HamburgerMenu: React.FC<Props> = ({ isOpen, ...props }) => {
       width={width}
       height={height}
       stroke="#fff"
-      whileHover={{ stroke: "#64ffda" }}
+      whileHover={{ stroke: '#64ffda' }}
       {...props}
     >
       <motion.line
@@ -97,11 +97,11 @@ const MobileMenu: React.FC = () => {
 
   const divContainer: Variants = {
     initial: { opacity: 0 },
-    enter: { opacity: 1 },
+    enter: { opacity: 1 }
   };
   const linkVariant: Variants = {
     initial: { opacity: 0 },
-    enter: { opacity: 1 },
+    enter: { opacity: 1 }
   };
 
   return (

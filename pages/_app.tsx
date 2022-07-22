@@ -1,9 +1,9 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import Navbar from "../components/navbar";
-import { AnimatePresence } from "framer-motion";
-import Spline from "@splinetool/react-spline";
-import { useEffect, useState } from "react";
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+import Navbar from '../components/navbar';
+import { AnimatePresence } from 'framer-motion';
+import Spline from '@splinetool/react-spline';
+import { useEffect, useState } from 'react';
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   const [show, setShow] = useState(false);

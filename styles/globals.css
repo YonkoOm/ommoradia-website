@@ -11,6 +11,6 @@ body {
 }
 
 @font-face {
-  font-family: "Coolvetica";
-  src: url("/fonts/CoolveticaRg-Regular.woff");
+  font-family: 'Coolvetica';
+  src: url('/fonts/CoolveticaRg-Regular.woff');
 }

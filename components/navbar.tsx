@@ -1,17 +1,17 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCircleUser,
   faGear,
   faHome,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { motion } from "framer-motion";
-import NavLink from "./nav-link";
-import MobileMenu from "./mobile-menu";
+  faEnvelope
+} from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { motion } from 'framer-motion';
+import NavLink from './nav-link';
+import MobileMenu from './mobile-menu';
 
 const Navbar: React.FC = () => {
   return (

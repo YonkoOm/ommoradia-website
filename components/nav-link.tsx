@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 interface Props {
   href: string;
@@ -16,7 +16,7 @@ const NavLink: React.FC<Props> = ({ href, children, ...props }) => {
   // grass-teal: #88ccca
   return (
     <Link href={href}>
-      <a {...props} style={{ color: href === asPath ? "#64ffda" : undefined }}>
+      <a {...props} style={{ color: href === asPath ? '#64ffda' : undefined }}>
         {children}
       </a>
     </Link>
