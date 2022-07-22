@@ -9,9 +9,8 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import StrawHat from "../assets/images/luffy.png";
 import { motion } from "framer-motion";
-import NavLink from "./NavLink";
+import NavLink from "./nav-link";
 import MobileMenu from "./mobile-menu";
 
 const Navbar: React.FC = () => {
@@ -23,7 +22,7 @@ const Navbar: React.FC = () => {
             whileHover={{ rotate: 20 }}
             className="block flex-shrink-0 mr-1 md:mx-auto h-auto w-12 md:w-[55px]"
           >
-            <Image src={StrawHat} alt="logo" />
+            <Image src="/images/luffy.png" alt="logo" width={75} height={30} />
           </motion.div>
           <div className="text-white text-center text-sm md:text-xs font-mplus font-bold w-full">
             Moradia
