@@ -13,6 +13,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@splinetool/react-spline": "^2.2.1",
     "@splinetool/runtime": "^0.9.82",
     "framer-motion": "^6.5.1",
