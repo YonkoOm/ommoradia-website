@@ -1,4 +1,4 @@
-const options = {
+const format = {
   arrowParens: 'avoid',
   singleQuote: true,
   bracketSpacing: true,
@@ -8,4 +8,4 @@ const options = {
   trailingComma: 'none'
 };
 
-module.exports = options;
+module.exports = format;
