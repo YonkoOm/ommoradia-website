@@ -109,7 +109,7 @@ const MobileMenu: React.FC = () => {
       <HamburgerMenu
         isOpen={isOpen}
         onClick={() => setIsOpen(!isOpen)}
-        className="absolute right-2 top-4 cursor-pointer"
+        className="absolute right-2 top-4 cursor-pointer select-none"
       />
       {isOpen && (
         <motion.div

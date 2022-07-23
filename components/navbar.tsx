@@ -15,7 +15,7 @@ import MobileMenu from './mobile-menu';
 
 const Navbar: React.FC = () => {
   return (
-    <div className="w-full md:w-[60px] h-12 md:h-full md:min-h-[500px] absolute bg-black bg-opacity-30 md:bg-opacity-60 backdrop-blur-[10px] z-30">
+    <div className="w-full md:w-[60px] h-12 md:h-full md:min-h-[500px] absolute bg-black bg-opacity-30 md:bg-opacity-60 backdrop-blur-[10px] select-none z-30">
       <Link href="/">
         <a className="inline-flex md:block my-[7px] p-[7px] md:my-2 md:px-0 md:py-2">
           <motion.div
