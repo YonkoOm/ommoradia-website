@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, Variants, HTMLMotionProps } from 'framer-motion';
 
-interface Props extends HTMLMotionProps<'span'> {
+interface Props extends HTMLMotionProps<'div'> {
   text: string;
   delay: number;
 }
