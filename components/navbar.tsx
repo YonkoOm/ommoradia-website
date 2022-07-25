@@ -22,7 +22,12 @@ const Navbar: React.FC = () => {
             whileHover={{ rotate: 20 }}
             className="block flex-shrink-0 mr-1 md:mx-auto h-auto w-12 md:w-[55px]"
           >
-            <Image src="/images/luffy.png" alt="logo" width={75} height={30} />
+            <Image
+              src="/images/mugiwara.png"
+              alt="logo"
+              width={75}
+              height={30}
+            />
           </motion.div>
           <div className="text-white text-center text-sm md:text-xs font-mplus font-bold w-full">
             Moradia
