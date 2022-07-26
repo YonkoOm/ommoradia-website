@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
               height={30}
             />
           </motion.div>
-          <div className="text-white text-center text-sm md:text-xs font-mplus font-bold w-full">
+          <div className="text-[#fff7ed] text-center text-sm md:text-xs font-mplus font-bold w-full">
             Moradia
           </div>
         </a>
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
             href="https://www.linkedin.com/in/om-moradia-112133213/"
             target="_blank"
             rel="noreferrer noopener"
-            className="block text-[#64ffda] hover:text-slate-200 leading-5 p-2"
+            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 p-2"
           >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
             href="https://github.com/YonkoOm"
             target="_blank"
             rel="noreferrer noopener"
-            className="block text-[#64ffda] hover:text-slate-200 leading-5 p-2"
+            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 p-2"
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
@@ -81,7 +81,9 @@ const Navbar: React.FC = () => {
         <li>
           <a
             href="mailto:moradia@wisc.edu"
-            className="block text-[#64ffda] hover:text-slate-200 leading-5 p-2"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 p-2"
           >
             <FontAwesomeIcon icon={faEnvelope} />
           </a>

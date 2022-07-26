@@ -117,7 +117,7 @@ const MobileMenu: React.FC = () => {
           animate="enter"
           variants={divContainer}
           transition={{ duration: 0.5, staggerChildren: 0.175 }}
-          className="absolute right-2 text-center text-slate-200 font-varela leading-8 w-48 h-26 rounded-md bg-[#002e63]"
+          className="absolute right-2 text-center text-[#fff7ed] font-varela leading-8 w-48 h-26 rounded-md bg-[#002e63]"
         >
           <nav>
             <Link href="/" passHref>
@@ -156,7 +156,7 @@ const MobileMenu: React.FC = () => {
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
-                className="text-[#64ffda] hover:text-slate-200"
+                className="text-[#64ffda] hover:text-[#fff7ed]"
               />
             </a>
             <a
@@ -166,13 +166,17 @@ const MobileMenu: React.FC = () => {
             >
               <FontAwesomeIcon
                 icon={faGithub}
-                className="text-[#64ffda] hover:text-slate-200"
+                className="text-[#64ffda] hover:text-[#fff7ed]"
               />
             </a>
-            <a href="mailto:moradia@wisc.edu">
+            <a
+              href="mailto:moradia@wisc.edu"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <FontAwesomeIcon
                 icon={faEnvelope}
-                className="text-[#64ffda] hover:text-slate-200"
+                className="text-[#64ffda] hover:text-[#fff7ed]"
               />
             </a>
           </div>
