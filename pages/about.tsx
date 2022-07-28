@@ -1,6 +1,6 @@
 import { motion, Variants } from 'framer-motion';
 import Link from 'next/link';
-import Layout from '../components/layout';
+import Section from '../components/layout';
 
 const About: React.FC = () => {
   const headerVariant: Variants = {
@@ -11,7 +11,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <Layout
+    <Section
       title="About - Om Moradia"
       header="About Me"
       variants={headerVariant}
@@ -21,7 +21,7 @@ const About: React.FC = () => {
       }}
     >
       <p>
-        I am currently a third-year student at the{' '}
+        I am a third-year student at the{' '}
         <motion.a
           href="https://www.wisc.edu/about/"
           target="_blank"
@@ -34,8 +34,9 @@ const About: React.FC = () => {
         studying <b>Computer Science</b>.
       </p>
       <p className="mt-2 md:mt-3">
-        Currently, my main focus is learning new techologies while continuing
-        to work on projects that can help refine the ones{' '}
+        Currently, my main focus is to continuously become a better programmer
+        by working on projects to help diversify my thought process, learn new
+        technologies, and refine the ones{' '}
         <Link href="/skills" passHref>
           <motion.a
             className="text-[#64ffda] sm:inline-flex hover:text-[#bfdbfe]"
@@ -44,17 +45,18 @@ const About: React.FC = () => {
             I know
           </motion.a>
         </Link>
-        {'.'} At the same time, I&apos;m open for any software engineering
-        interships in hopes to gain as much real-world experience as possible.
+        {'.'} At the same time, I&apos;m open and actively looking for any
+        software engineering internships/opportunities in hopes to gain as much
+        real-world experience as possible and try to make the world a better
+        place :)
       </p>
       <p className="mt-2 md:mt-3">
         In my free time and outside of coding, I enjoy trying out different
-        types of food, watching anime and Korean shows,
-        and listening to music. I also enjoy reading the news, especially
-        anything science related, and keeping up with what&apos;s going on in
-        the coding world.
+        types of food, watching anime and Korean shows, and listening to music.
+        I also enjoy reading the news, especially anything science related, and
+        keeping up with what&apos;s going on in the coding world.
       </p>
-    </Layout>
+    </Section>
   );
 };
 

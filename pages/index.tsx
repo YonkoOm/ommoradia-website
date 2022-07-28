@@ -14,7 +14,11 @@ const Home: React.FC = () => {
 
   // when using viewport instead of fixed pixels -- 6.5vw for h1 and 3.75vw for typewriter font size
   return (
-    <motion.div className="absolute my-0 mx-auto top-36 md:top-[35%] left-[10%] z-20" variants={container} exit="exit">
+    <motion.div
+      className="absolute my-0 mx-auto top-36 md:top-[35%] left-[10%] z-20"
+      variants={container}
+      exit="exit"
+    >
       <Head>
         <title>Om Moradia - Homepage</title>
       </Head>

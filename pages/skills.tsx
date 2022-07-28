@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import Layout from '../components/layout';
+import Section from '../components/layout';
 
 const Skills: React.FC = () => {
   const headerVariant: Variants = {
@@ -10,7 +10,7 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <Layout
+    <Section
       title="Skills - Om Moradia"
       header={
         <>
@@ -24,21 +24,21 @@ const Skills: React.FC = () => {
       }}
     >
       <p>
-        I have experience in front-end developement, using frameworks such as
-        NextJS and React. I also have experience using ExpressJS, MongoDB, and
-        have been working with a GraphQL alternative for Typescript known as
-        tRPC.
+        I have experience in front-end (and some back-end) development and
+        actively use React.js as well as a React framework known as Next.js. I
+        also have experience using ExpressJS, working with MongoDB, and have
+        been trying out a GraphQL/REST alternative known as tRPC.
       </p>
       <p className="mt-2 md:mt-3">
-        Aside from fullstack development, I also have interests in software
-        developement and am open for any opportunities that can help increase my
-        knowledge and make a positive impact.
+        Aside from fullstack development, I have a decent amount of experience
+        in software development and am knowledgeable in fundamentals such as OOP
+        and data structures.
       </p>
       <p className="mt-2 md:mt-3">
         Technologies I been working with as of late include:{' '}
         <span className="text-[#64ffda]">
-          Java, C, C++, Pyton, Javascript (ES6+), Typescript, HTML, CSS, NodeJS,
-          React, and Svelte.
+          Java, C, C++, Python, Javascript (ES6+), Typescript, HTML, CSS,
+          Node.js, React.js, and Svelte.
         </span>
       </p>
       <p className="mt-2 md:mt-3">
@@ -47,13 +47,13 @@ const Skills: React.FC = () => {
           href="https://www.linkedin.com/in/om-moradia-112133213/"
           target="_blank"
           rel="noreferrer noopener"
-          className="text-[#64ffda] inline-flex hover:text-[#bfdbfe]"
+          className="text-[#64ffda] sm:inline-flex hover:text-[#bfdbfe]"
           whileHover={{ scale: 1.03 }}
         >
           LinkedIn.
         </motion.a>
       </p>
-    </Layout>
+    </Section>
   );
 };
 
