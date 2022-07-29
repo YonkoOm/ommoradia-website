@@ -117,14 +117,14 @@ const MobileMenu: React.FC = () => {
           animate="enter"
           variants={divContainer}
           transition={{ duration: 0.5, staggerChildren: 0.175 }}
-          className="absolute right-2 text-center text-[#fff7ed] font-varela leading-8 w-48 h-26 rounded-md bg-[#002e63]"
+          className="absolute right-2 text-center text-[#fff7ed] font-varela leading-8 w-48 rounded-md bg-[#002e63]"
         >
           <nav>
             <Link href="/" passHref>
               <motion.a
                 onClick={() => setIsOpen(false)}
                 variants={linkVariant}
-                className="block w-full rounded-md hover:bg-[#003663] hover:underline hover:underline-offset-1"
+                className="block rounded-md hover:bg-[#003663] hover:underline hover:underline-offset-1"
               >
                 Home
               </motion.a>
@@ -133,7 +133,7 @@ const MobileMenu: React.FC = () => {
               <motion.a
                 onClick={() => setIsOpen(false)}
                 variants={linkVariant}
-                className="block w-full rounded-sm hover:bg-[#003663] hover:underline hover:underline-offset-1"
+                className="block rounded-sm hover:bg-[#003663] hover:underline hover:underline-offset-1"
               >
                 About
               </motion.a>
@@ -142,13 +142,13 @@ const MobileMenu: React.FC = () => {
               <motion.a
                 onClick={() => setIsOpen(false)}
                 variants={linkVariant}
-                className="block w-full rounded-md hover:bg-[#003663] hover:underline hover:underline-offset-1"
+                className="block rounded-md hover:bg-[#003663] hover:underline hover:underline-offset-1"
               >
                 Skills
               </motion.a>
             </Link>
           </nav>
-          <div className="space-x-3 text-center m-0 p-0 text-base">
+          <div className="text-center text-base">
             <a
               href="https://www.linkedin.com/in/om-moradia-112133213/"
               target="_blank"
@@ -156,7 +156,7 @@ const MobileMenu: React.FC = () => {
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
-                className="text-[#64ffda] hover:text-[#fff7ed]"
+                className="text-[#64ffda] hover:text-[#fff7ed] py-0.5 px-1.5"
               />
             </a>
             <a
@@ -166,7 +166,7 @@ const MobileMenu: React.FC = () => {
             >
               <FontAwesomeIcon
                 icon={faGithub}
-                className="text-[#64ffda] hover:text-[#fff7ed]"
+                className="text-[#64ffda] hover:text-[#fff7ed] py-0.5 px-1.5"
               />
             </a>
             <a
@@ -176,7 +176,7 @@ const MobileMenu: React.FC = () => {
             >
               <FontAwesomeIcon
                 icon={faEnvelope}
-                className="text-[#64ffda] hover:text-[#fff7ed]"
+                className="text-[#64ffda] hover:text-[#fff7ed] py-0.5 px-1.5"
               />
             </a>
           </div>

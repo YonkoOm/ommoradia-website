@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
         <a className="inline-flex md:block my-[7px] p-[7px] md:my-2 md:px-0 md:py-2">
           <motion.div
             whileHover={{ rotate: 20 }}
-            className="block flex-shrink-0 mr-1 md:mx-auto h-auto w-12 md:w-[55px]"
+            className="md:block mr-1 md:mx-auto w-12 md:w-14"
           >
             <Image
               src="/images/mugiwara.png"
@@ -29,21 +29,21 @@ const Navbar: React.FC = () => {
               height={30}
             />
           </motion.div>
-          <div className="text-[#fff7ed] text-center text-sm md:text-xs font-mplus font-bold w-full">
+          <div className="md:block text-[#fff7ed] text-center text-sm md:text-xs font-mplus font-bold md:-mt-0.5">
             Moradia
           </div>
         </a>
       </Link>
-      <nav className="hidden md:block absolute w-full text-center h-[210px] leading-[51px] top-[50%] mt-[-110px]">
+      <nav className="hidden md:block absolute w-full text-center leading-[51px] top-[50%] -mt-[110px]">
         <NavLink
           href="/"
-          className="group text-[#fff7ed] relative block text-[22px] no-underine after:transition-all after:duration-500 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['HOME'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[2px]"
+          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-500 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['HOME'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[2px]"
         >
           <FontAwesomeIcon icon={faHome} className="group-hover:opacity-40" />
         </NavLink>
         <NavLink
           href="/about"
-          className="group text-[#fff7ed] relative block text-[22px] no-underine after:transition-all after:duration-500 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['ABOUT'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[2px]"
+          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-500 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['ABOUT'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[2px]"
         >
           <FontAwesomeIcon
             icon={faCircleUser}
@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
         </NavLink>
         <NavLink
           href="/skills"
-          className="group text-[#fff7ed] relative block text-[22px] no-underine after:transition-all after:duration-500 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['SKILLS'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[2px]"
+          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-500 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['SKILLS'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[2px]"
         >
           <FontAwesomeIcon icon={faGear} className="group-hover:opacity-40" />
         </NavLink>
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
             href="https://www.linkedin.com/in/om-moradia-112133213/"
             target="_blank"
             rel="noreferrer noopener"
-            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 p-2"
+            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 py-2"
           >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
             href="https://github.com/YonkoOm"
             target="_blank"
             rel="noreferrer noopener"
-            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 p-2"
+            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 py-2"
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
             href="mailto:moradia@wisc.edu"
             target="_blank"
             rel="noreferrer noopener"
-            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 p-2"
+            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 py-2"
           >
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
