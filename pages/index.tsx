@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import { motion, Variants } from 'framer-motion';
 import AnimatedLetters from '../components/animated-letters';
@@ -29,7 +30,6 @@ const Home: React.FC = () => {
           whileHover={{
             scale: 1.2
           }}
-          // className="hover:text-[#fdba74]"
           className="hover:text-[#64ffda]"
           transition={{
             type: 'spring',
@@ -44,7 +44,6 @@ const Home: React.FC = () => {
           whileHover={{
             scale: 1.2
           }}
-          // className="hover:text-[#fdba74]"
           className="hover:text-[#64ffda]"
           transition={{
             type: 'spring',
@@ -59,7 +58,6 @@ const Home: React.FC = () => {
           whileHover={{
             scale: 1.2
           }}
-          // className="hover:text-[#fdba73]"
           className="hover:text-[#64ffda]"
           transition={{
             type: 'spring',
