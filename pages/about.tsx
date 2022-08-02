@@ -1,11 +1,11 @@
+import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import Link from 'next/link';
 import Section from '../components/layout';
 
 const About: React.FC = () => {
   const headerVariant: Variants = {
-    // figure out a better way to perform the transitions
-    hidden: { opacity: 0, x: -40, transition: { duration: 0.5, delay: 0.3 } },
+    hidden: { opacity: 0, x: -40 },
     enter: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.3 } },
     exit: { opacity: 0, x: -40, transition: { duration: 0.5, delay: 0.3 } }
   };
@@ -17,8 +17,8 @@ const About: React.FC = () => {
       variants={headerVariant}
       whileHover={{
         scale: 1.1,
-        transition: { type: 'spring', stiffness: 475, damping: 12 }
       }}
+      transition={{ type: 'spring', stiffness: 500, damping: 6 }}
     >
       <p>
         I am a third-year student at the{' '}

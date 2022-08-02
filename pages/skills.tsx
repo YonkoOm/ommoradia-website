@@ -4,7 +4,7 @@ import Section from '../components/layout';
 
 const Skills: React.FC = () => {
   const headerVariant: Variants = {
-    hidden: { opacity: 0, x: 40, transition: { duration: 0.5, delay: 0.3 } },
+    hidden: { opacity: 0, x: 40 },
     enter: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.3 } },
     exit: { opacity: 0, x: 40, transition: { duration: 0.5, delay: 0.3 } }
   };
@@ -20,8 +20,8 @@ const Skills: React.FC = () => {
       variants={headerVariant}
       whileHover={{
         rotate: -5,
-        transition: { type: 'spring', stiffness: 475, damping: 7 }
       }}
+      transition={{ type: 'spring', stiffness: 500, damping: 6 }}
     >
       <p>
         I have experience in front-end (and some back-end) development and
