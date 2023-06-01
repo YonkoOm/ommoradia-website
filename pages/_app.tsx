@@ -1,10 +1,14 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import Navbar from '../components/navbar';
-import { AnimatePresence } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
+import { AnimatePresence } from 'framer-motion';
+import '@fortawesome/fontawesome-svg-core/styles.css'; // used to fix server-size rendering bug where icons appear large initially before being properly sized
+import { config } from '@fortawesome/fontawesome-svg-core';
+
+config.autoAddCss = false; // prevent font awesome form adding its own CSS
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   const [show, setShow] = useState(false);
