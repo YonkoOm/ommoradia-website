@@ -19,7 +19,7 @@ const Skills: React.FC = () => {
       }
       variants={headerVariant}
       whileHover={{
-        rotate: -5,
+        rotate: -5
       }}
       transition={{ type: 'spring', stiffness: 500, damping: 6 }}
     >
@@ -37,8 +37,8 @@ const Skills: React.FC = () => {
       <p className="mt-2 md:mt-3">
         Technologies I been working with as of late include:{' '}
         <span className="text-[#64ffda]">
-          Java, C, C++, Python, Javascript (ES6+), Typescript, HTML, CSS,
-          Node.js, React.js, and Svelte.
+          Java, C, C++, Python, Rust, Javascript (ES6+), Typescript, HTML, CSS,
+          Node.js, React.js, Next.js, and Svelte.
         </span>
       </p>
       <p className="mt-2 md:mt-3">

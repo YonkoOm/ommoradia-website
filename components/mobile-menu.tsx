@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { AnimatePresence, motion, SVGMotionProps, Variants } from 'framer-motion';
+import {
+  AnimatePresence,
+  motion,
+  SVGMotionProps,
+  Variants
+} from 'framer-motion';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -98,7 +103,11 @@ const MobileMenu: React.FC = () => {
   const divContainer: Variants = {
     initial: { opacity: 0, rotateX: 90 },
     enter: { opacity: 1, rotateX: 0 },
-    exit: { opacity: 0, rotateX: 90, transition: { duration: 0.3, ease: 'easeIn' } }
+    exit: {
+      opacity: 0,
+      rotateX: 90,
+      transition: { duration: 0.3, ease: 'easeIn' }
+    }
   };
   const linkVariant: Variants = {
     initial: { opacity: 0 },
@@ -121,37 +130,35 @@ const MobileMenu: React.FC = () => {
             animate="enter"
             exit="exit"
             variants={divContainer}
-            transition={{ duration: 0.5, delayChildren: 0.15, staggerChildren: 0.175 }}
+            transition={{
+              duration: 0.5,
+              delayChildren: 0.15,
+              staggerChildren: 0.175
+            }}
             className="absolute right-2 text-center text-[#fff7ed] font-varela leading-8 w-48 rounded-md bg-[#002e63]"
           >
             <nav>
-              <Link href="/" passHref>
-                <motion.a
-                  onClick={() => setIsOpen(false)}
-                  variants={linkVariant}
-                  className="block rounded-md hover:bg-[#003663] hover:underline hover:underline-offset-1"
-                >
-                  Home
-                </motion.a>
-              </Link>
-              <Link href="/about" passHref>
-                <motion.a
-                  onClick={() => setIsOpen(false)}
-                  variants={linkVariant}
-                  className="block rounded-sm hover:bg-[#003663] hover:underline hover:underline-offset-1"
-                >
-                  About
-                </motion.a>
-              </Link>
-              <Link href="/skills" passHref>
-                <motion.a
-                  onClick={() => setIsOpen(false)}
-                  variants={linkVariant}
-                  className="block rounded-md hover:bg-[#003663] hover:underline hover:underline-offset-1"
-                >
-                  Skills
-                </motion.a>
-              </Link>
+              <motion.span
+                onClick={() => setIsOpen(false)}
+                variants={linkVariant}
+                className="block rounded-md hover:bg-[#003663] hover:underline hover:underline-offset-1"
+              >
+                <Link href="/">Home</Link>
+              </motion.span>
+              <motion.span
+                onClick={() => setIsOpen(false)}
+                variants={linkVariant}
+                className="block rounded-sm hover:bg-[#003663] hover:underline hover:underline-offset-1"
+              >
+                <Link href="/about">About</Link>
+              </motion.span>
+              <motion.span
+                onClick={() => setIsOpen(false)}
+                variants={linkVariant}
+                className="block rounded-md hover:bg-[#003663] hover:underline hover:underline-offset-1"
+              >
+                <Link href="/skills">Skills</Link>
+              </motion.span>
             </nav>
             <div className="text-center text-base">
               <a

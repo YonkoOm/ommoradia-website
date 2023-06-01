@@ -16,23 +16,25 @@ import MobileMenu from './mobile-menu';
 const Navbar: React.FC = () => {
   return (
     <div className="w-full md:w-[60px] h-12 md:h-full md:min-h-[500px] absolute bg-black bg-opacity-30 md:bg-opacity-60 backdrop-blur-[10px] select-none z-30">
-      <Link href="/">
-        <a className="inline-flex md:block my-[7px] p-[7px] md:my-2 md:px-0 md:py-2">
-          <motion.div
-            whileHover={{ rotate: 20 }}
-            className="md:block mr-1 md:mx-auto w-12 md:w-14"
-          >
-            <Image
-              src="/images/mugiwara.png"
-              alt="logo"
-              width={75}
-              height={30}
-            />
-          </motion.div>
-          <div className="md:block text-[#fff7ed] text-center text-sm md:text-xs font-mplus font-bold md:-mt-0.5">
-            Moradia
-          </div>
-        </a>
+      <Link
+        href="/"
+        className="inline-flex md:block my-[7px] p-[7px] md:my-2 md:px-0 md:py-2"
+      >
+        <motion.div
+          whileHover={{ rotate: 20 }}
+          className="md:block relative mr-1 md:mx-auto my-auto w-12 md:w-14 h-5 md:h-[22px]"
+        >
+          <Image
+            src="/images/mugiwara.png"
+            alt="straw hat logo "
+            sizes="60px"
+            fill
+            priority
+          />
+        </motion.div>
+        <div className="md:block text-[#fff7ed] text-center text-sm md:text-xs font-mplus font-bold mt-1">
+          Moradia
+        </div>
       </Link>
       <nav className="hidden md:block absolute w-full text-center leading-[51px] top-[50%] -mt-[110px]">
         <NavLink

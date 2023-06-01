@@ -16,7 +16,7 @@ const About: React.FC = () => {
       header="About Me"
       variants={headerVariant}
       whileHover={{
-        scale: 1.1,
+        scale: 1.1
       }}
       transition={{ type: 'spring', stiffness: 500, damping: 6 }}
     >
@@ -37,14 +37,12 @@ const About: React.FC = () => {
         Currently, my main focus is to continuously become a better programmer
         by working on projects to help diversify my thought process, learn new
         technologies, and refine the ones{' '}
-        <Link href="/skills" passHref>
-          <motion.a
-            className="text-[#64ffda] sm:inline-flex hover:text-[#bfdbfe]"
-            whileHover={{ scale: 1.03 }}
-          >
-            I know
-          </motion.a>
-        </Link>
+        <motion.span
+          className="text-[#64ffda] sm:inline-flex hover:text-[#bfdbfe]"
+          whileHover={{ scale: 1.03 }}
+        >
+          <Link href="/skills">I know</Link>
+        </motion.span>
         {'.'} At the same time, I&apos;m open and actively looking for any
         software engineering internships/opportunities in hopes to gain as much
         real-world experience as possible and try to make the world a better
