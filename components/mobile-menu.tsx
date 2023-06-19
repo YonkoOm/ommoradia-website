@@ -5,10 +5,10 @@ import {
   SVGMotionProps,
   Variants
 } from 'framer-motion';
-import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import NavLink from './nav-link';
 
 interface Props extends SVGMotionProps<SVGElement> {
   isOpen: boolean;
@@ -53,9 +53,13 @@ const HamburgerMenu: React.FC<Props> = ({ isOpen, ...props }) => {
     transition: { type: 'spring', stiffness: 400, damping: 20 }
   };
 
+  const svgVariant: Variants = {
+    hover: { stroke: '#64ffda' }
+  };
+
   const unitHeight = 6;
   const height = 24;
-  const width = 24;
+  const width = 22;
   const unitWidth = (unitHeight * width) / height;
 
   return (
@@ -66,7 +70,7 @@ const HamburgerMenu: React.FC<Props> = ({ isOpen, ...props }) => {
       width={width}
       height={height}
       stroke="#fff"
-      whileHover={{ stroke: '#64ffda' }}
+      variants={svgVariant}
       {...props}
     >
       <motion.line
@@ -100,7 +104,7 @@ const HamburgerMenu: React.FC<Props> = ({ isOpen, ...props }) => {
 const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const divContainer: Variants = {
+  const menu: Variants = {
     initial: { opacity: 0, rotateX: 90 },
     enter: { opacity: 1, rotateX: 0 },
     exit: {
@@ -109,19 +113,28 @@ const MobileMenu: React.FC = () => {
       transition: { duration: 0.3, ease: 'easeIn' }
     }
   };
-  const linkVariant: Variants = {
+  const link: Variants = {
     initial: { opacity: 0 },
     enter: { opacity: 1 },
     exit: { opacity: 0 }
   };
 
+  const bgColor = isOpen ? 'bg-[#1e2057]' : 'bg-[#0f102a] hover:bg-[#101840]';
+
+  const liveLinkStyle =
+    "after:absolute after:w-[1.5px] after:h-full after:left-0 after:bg-gradient-to-b after:from-transparent after:via-[#64ffda] after:content-['']";
+
+  const closeMenu = () => setIsOpen(false);
+
   return (
-    <div className="md:hidden">
-      <HamburgerMenu
-        isOpen={isOpen}
-        onClick={() => setIsOpen(!isOpen)}
-        className="absolute right-2 top-4 cursor-pointer select-none"
-      />
+    <div className="md:hidden inline-block float-right mr-2 mt-1.5">
+      <motion.div
+        className={`px-1.5 py-0.5 border ${bgColor} rounded-md border-blue-500 shadow shadow-gray-400 cursor-pointer select-none`}
+        onClick={() => setIsOpen(isOpen => !isOpen)}
+        whileHover="hover"
+      >
+        <HamburgerMenu isOpen={isOpen} className="mt-1.5" />
+      </motion.div>
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -129,36 +142,42 @@ const MobileMenu: React.FC = () => {
             initial="initial"
             animate="enter"
             exit="exit"
-            variants={divContainer}
+            variants={menu}
             transition={{
               duration: 0.5,
               delayChildren: 0.15,
               staggerChildren: 0.175
             }}
-            className="absolute right-2 text-center text-[#fff7ed] font-varela leading-8 w-48 rounded-md bg-[#002e63]"
+            className="absolute right-2 mt-1.5 text-center text-[#fff7ed] text-[15px] font-varela leading-8 w-44 rounded-s-md bg-gray-900 shadow-depth"
           >
             <nav>
-              <motion.span
-                onClick={() => setIsOpen(false)}
-                variants={linkVariant}
-                className="block rounded-md hover:bg-[#003663] hover:underline hover:underline-offset-1"
-              >
-                <Link href="/">Home</Link>
-              </motion.span>
-              <motion.span
-                onClick={() => setIsOpen(false)}
-                variants={linkVariant}
-                className="block rounded-sm hover:bg-[#003663] hover:underline hover:underline-offset-1"
-              >
-                <Link href="/about">About</Link>
-              </motion.span>
-              <motion.span
-                onClick={() => setIsOpen(false)}
-                variants={linkVariant}
-                className="block rounded-md hover:bg-[#003663] hover:underline hover:underline-offset-1"
-              >
-                <Link href="/skills">Skills</Link>
-              </motion.span>
+              <motion.div onClick={closeMenu} variants={link}>
+                <NavLink
+                  href="/"
+                  className="block relative rounded-md hover:bg-slate-800"
+                  pathStyling={liveLinkStyle}
+                >
+                  Home
+                </NavLink>
+              </motion.div>
+              <motion.div onClick={closeMenu} variants={link}>
+                <NavLink
+                  href="/about"
+                  className="block relative rounded-md hover:bg-slate-800"
+                  pathStyling={liveLinkStyle}
+                >
+                  About
+                </NavLink>
+              </motion.div>
+              <motion.div onClick={closeMenu} variants={link}>
+                <NavLink
+                  href="/skills"
+                  className="block relative rounded-md hover:bg-slate-800"
+                  pathStyling={liveLinkStyle}
+                >
+                  Skills
+                </NavLink>
+              </motion.div>
             </nav>
             <div className="text-center text-base">
               <a
