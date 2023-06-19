@@ -11,12 +11,17 @@ module.exports = {
       lg: '976px',
       xl: '1440px'
     },
-    fontFamily: {
-      mplus: ["'M PLUS Rounded 1c'", 'sans-serif'],
-      coolvetica: ['Coolvetica', 'sans-serif'],
-      varela: ['Varela Round']
-    },
-    extend: {}
+    extend: {
+      fontFamily: {
+        /* lato: ['var(--font-lato)'],
+        mplus: ['var(--font-mplus)'],
+        varela: ['var(--font-varela)'] */
+        mplus: ["'M PLUS Rounded 1c'", 'sans-serif'],
+        coolvetica: ['Coolvetica', 'sans-serif'],
+        varela: ['Varela Round'],
+        lato: ['Lato', 'sans-serif']
+      }
+    }
   },
   plugins: []
 };
