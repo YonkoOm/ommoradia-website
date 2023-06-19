@@ -2,15 +2,15 @@ import { Head, Html, Main, NextScript } from 'next/document';
 
 const Document = () => {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Varela+Round&display=swap"
+          href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Varela+Round&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="images/one-piece.ico" />
+        <link rel="icon" href="/images/one-piece.ico" />
       </Head>
-      <body>
+      <body className="bg-[#0f102a]">
         <Main />
         <NextScript />
       </body>

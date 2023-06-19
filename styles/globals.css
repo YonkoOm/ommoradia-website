@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-[#0f102a];
-  }
-}
-
 @font-face {
   font-family: 'Coolvetica';
   src: url('/fonts/CoolveticaRg-Regular.woff') format('woff');
