@@ -13,12 +13,15 @@ const About: React.FC = () => {
   return (
     <Section
       title="About - Om Moradia"
-      header="About Me"
+      header="/about me"
       variants={headerVariant}
       whileHover={{
         scale: 1.1
       }}
-      transition={{ type: 'spring', stiffness: 500, damping: 6 }}
+      whileTap={{
+        scale: 0.9
+      }}
+      transition={{ type: 'spring', stiffness: 600, damping: 9 }}
     >
       <p>
         I am a third-year student at the{' '}
@@ -36,7 +39,7 @@ const About: React.FC = () => {
       <p className="mt-2 md:mt-3">
         Currently, my main focus is to continuously become a better programmer
         by working on projects to help diversify my thought process, learn new
-        technologies, and refine the ones{' '}
+        technologies, and refine what{' '}
         <motion.span
           className="text-[#64ffda] sm:inline-flex hover:text-[#bfdbfe]"
           whileHover={{ scale: 1.03 }}

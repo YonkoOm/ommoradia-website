@@ -15,7 +15,7 @@ import MobileMenu from './mobile-menu';
 
 const Navbar: React.FC = () => {
   return (
-    <div className="w-full md:w-[60px] h-12 md:h-full md:min-h-[500px] absolute bg-black bg-opacity-30 md:bg-opacity-60 backdrop-blur-[10px] select-none z-30">
+    <div className="w-full md:w-[60px] h-12 md:h-full md:min-h-screen absolute bg-black/30 md:bg-black/60 backdrop-blur-[10px] select-none z-30">
       <Link
         href="/"
         className="inline-flex md:block my-[7px] p-[7px] md:my-2 md:px-0 md:py-2"
@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         >
           <Image
             src="/images/mugiwara.png"
-            alt="straw hat logo "
+            alt="straw hat logo"
             sizes="60px"
             fill
             priority
@@ -39,13 +39,13 @@ const Navbar: React.FC = () => {
       <nav className="hidden md:block absolute w-full text-center leading-[51px] top-[50%] -mt-[110px]">
         <NavLink
           href="/"
-          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-500 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['HOME'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[2px]"
+          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-700 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['HOME'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[1.75px]"
         >
           <FontAwesomeIcon icon={faHome} className="group-hover:opacity-40" />
         </NavLink>
         <NavLink
           href="/about"
-          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-500 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['ABOUT'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[2px]"
+          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-700 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['ABOUT'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[1.75px]"
         >
           <FontAwesomeIcon
             icon={faCircleUser}
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
         </NavLink>
         <NavLink
           href="/skills"
-          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-500 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['SKILLS'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[2px]"
+          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-700 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['SKILLS'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[1.75px]"
         >
           <FontAwesomeIcon icon={faGear} className="group-hover:opacity-40" />
         </NavLink>

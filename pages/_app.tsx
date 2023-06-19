@@ -3,27 +3,25 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Navbar from '../components/navbar';
 import Spline from '@splinetool/react-spline';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import '@fortawesome/fontawesome-svg-core/styles.css'; // used to fix server-size rendering bug where icons appear large initially before being properly sized
 import { config } from '@fortawesome/fontawesome-svg-core';
 
-config.autoAddCss = false; // prevent font awesome form adding its own CSS
+config.autoAddCss = false; // prevent font awesome from adding its own CSS
 
-const MyApp = ({ Component, pageProps, router }: AppProps) => {
+const Website = ({ Component, pageProps, router }: AppProps) => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShow(true);
-    }, 4150);
-
+    const timer = setTimeout(() => setShow(true), 5000);
     return () => clearTimeout(timer);
-  }, []);
+  });
 
   return (
     <>
       <Head>
+        <link rel="icon" href="/images/one-piece.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Om Moradia's Website" />
         <meta name="author" content="Om Moradia" />
@@ -45,4 +43,4 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
   );
 };
 
-export default MyApp;
+export default Website;
