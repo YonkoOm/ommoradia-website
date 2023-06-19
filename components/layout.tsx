@@ -28,13 +28,13 @@ const Layout: React.FC<Props> = ({
       </Head>
       <motion.div initial="hidden" animate="enter" exit="exit">
         <motion.h1
-          className="w-fit font-varela text-[#64ffda] font-bold text-4xl md:text-[40px]"
+          className="w-fit font-varela font-bold text-[#64ffda]  text-[32px] md:text-[40px] leading-8 md:leading-none"
           {...additionalAnimations}
         >
           {header}
         </motion.h1>
         <motion.div
-          className="text-[#fff7ed] mt-4 font-mplus font-normal text-sm md:text-[15px] backdrop-blur-[8px]"
+          className="text-[#fff7ed] p-3 -ml-3 mt-1 font-mplus font-normal text-[13px] md:text-[14px] backdrop-blur-[8px]"
           variants={pageVariant}
           transition={{ duration: 0.4, ease: 'easeInOut' }}
         >
