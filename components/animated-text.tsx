@@ -31,7 +31,7 @@ const AnimatedText: React.FC<Props> = ({
   };
 
   return (
-    <motion.span
+    <motion.div
       initial="hidden"
       animate="visible"
       transition={{ staggerChildren: 0.075, delayChildren: delay }}
@@ -48,7 +48,7 @@ const AnimatedText: React.FC<Props> = ({
           {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
       ))}
-    </motion.span>
+    </motion.div>
   );
 };
 
