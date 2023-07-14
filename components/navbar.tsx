@@ -12,6 +12,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import NavLink from './nav-link';
 import MobileMenu from './mobile-menu';
+import { mplus } from '@/fonts';
 
 const Navbar: React.FC = () => {
   return (
@@ -32,7 +33,9 @@ const Navbar: React.FC = () => {
             priority
           />
         </motion.div>
-        <div className="md:block text-[#fff7ed] text-center text-sm md:text-xs font-mplus font-bold mt-1">
+        <div
+          className={`md:block text-[#fff7ed] text-center text-sm md:text-xs ${mplus.variable} font-mplus font-bold mt-1`}
+        >
           Moradia
         </div>
       </Link>

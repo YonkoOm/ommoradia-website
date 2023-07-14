@@ -13,13 +13,10 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        /* lato: ['var(--font-lato)'],
+        lato: ['var(--font-lato)'],
         mplus: ['var(--font-mplus)'],
-        varela: ['var(--font-varela)'] */
-        mplus: ["'M PLUS Rounded 1c'", 'sans-serif'],
-        coolvetica: ['Coolvetica', 'sans-serif'],
-        varela: ['Varela Round'],
-        lato: ['Lato', 'sans-serif']
+        varela: ['var(--font-varela)'],
+        coolvetica: ['var(--font-coolvetica)']
       }
     }
   },

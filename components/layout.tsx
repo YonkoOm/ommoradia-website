@@ -34,7 +34,7 @@ const Layout: React.FC<Props> = ({
           {header}
         </motion.h1>
         <motion.div
-          className="text-[#fff7ed] p-3 -ml-3 mt-1 font-mplus font-normal text-[13px] md:text-[14px] backdrop-blur-[8px]"
+          className="text-[#fff7ed] p-3 -ml-3 mt-1 font-lato md:font-light text-[13px] md:text-[15px] backdrop-blur-[8px]"
           variants={pageVariant}
           transition={{ duration: 0.4, ease: 'easeInOut' }}
         >

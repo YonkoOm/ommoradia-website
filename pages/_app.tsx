@@ -5,7 +5,8 @@ import Navbar from '../components/navbar';
 import Spline from '@splinetool/react-spline';
 import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import '@fortawesome/fontawesome-svg-core/styles.css'; // used to fix server-size rendering bug where icons appear large initially before being properly sized
+import '@fortawesome/fontawesome-svg-core/styles.css'; // import CSS directly to prevent icons from initially appearing large
+import { mplus, coolvetica, varela, lato } from '@/fonts';
 import { config } from '@fortawesome/fontawesome-svg-core';
 
 config.autoAddCss = false; // prevent font awesome from adding its own CSS
@@ -16,7 +17,7 @@ const Website = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {
     const timer = setTimeout(() => setShow(true), 5000);
     return () => clearTimeout(timer);
-  });
+  }, []);
 
   return (
     <>
@@ -31,9 +32,13 @@ const Website = ({ Component, pageProps, router }: AppProps) => {
         <meta property="og:image" content="/images/homepage.png" />
       </Head>
       <Navbar />
-      <AnimatePresence exitBeforeEnter>
-        <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
+      <main
+        className={`${mplus.variable} ${coolvetica.variable} ${varela.variable} ${lato.variable}`}
+      >
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
+      </main>
       {show && (
         <div className="absolute h-full w-full">
           <Spline scene="https://prod.spline.design/f2GotmeTbUgCOD5f/scene.splinecode" />
