@@ -11,24 +11,33 @@ const Home: React.FC = () => {
     transition: { duration: 0.4 }
   };
 
-  const textAnimation = {
-    hover: {
-      scale: 1.2
-    },
-    tap: {
-      scale: 0.9
-    }
+  const letterHover: Variant = {
+    scale: 1.2
   };
 
-  const textTransition: Transition = {
+  const letterTap: Variant = {
+    scale: 0.7
+  };
+
+  const letterTransition: Transition = {
     type: 'spring',
     stiffness: 500,
     damping: 8
   };
 
-  const topLine = 'Welcome!';
+  const colorTransition: Transition = {
+    delay: 1,
+    duration: 5.5,
+    ease: [0.7, 0.1, 0.1, 0.7],
+    repeat: Infinity,
+    repeatType: 'reverse'
+  };
+
+  const topLine = 'Welcome.';
   const middleLine = "I'm Om Moradia,";
   const bottomLine = 'aspiring software engineer.';
+
+  const baseDelay = 0.4;
 
   return (
     <motion.div
@@ -41,88 +50,74 @@ const Home: React.FC = () => {
       <h1 className="font-coolvetica font-normal text-[28px] sm:text-[36px] md:text-[40px] lg:text-5xl leading-tight lg:leading-[53px]">
         <AnimatedText
           text={topLine}
-          delay={0.4}
-          whileHover={textAnimation.hover}
-          whileTap={textAnimation.tap}
-          transition={textTransition}
+          delay={baseDelay}
+          whileHover={letterHover}
+          whileTap={letterTap}
+          transition={letterTransition}
           letterAnimation={{
             color: ['#fcdff5', '#9bb3fa', '#ffca28'],
-            transition: {
-              delay: 1,
-              duration: 5.5,
-              ease: [0.7, 0.1, 0.1, 0.7],
-              repeat: Infinity,
-              repeatType: 'reverse'
-            }
+            transition: colorTransition
           }}
         />
         <AnimatedText
           text={middleLine}
-          delay={0.075 * (topLine.length + 1) + 0.4}
-          whileHover={textAnimation.hover}
-          whileTap={textAnimation.tap}
-          transition={textTransition}
+          delay={0.075 * (topLine.length + 1) + baseDelay}
+          whileHover={letterHover}
+          whileTap={letterTap}
+          transition={letterTransition}
           className="hover:text-[#64ffda] text-[#fff7ed]"
         />
         <AnimatedText
           text={bottomLine}
-          delay={0.075 * (topLine.length + middleLine.length + 1) + 0.4}
-          whileHover={textAnimation.hover}
-          whileTap={textAnimation.tap}
-          transition={textTransition}
-          // className="hover:text-[#64ffda]"
+          delay={0.075 * (topLine.length + middleLine.length + 1) + baseDelay}
+          whileHover={letterHover}
+          whileTap={letterTap}
+          transition={letterTransition}
           letterAnimation={{
             color: ['#ffca28', '#9bb3fa', '#fcdff5'],
-            transition: {
-              delay: 1,
-              duration: 5.5,
-              ease: [0.7, 0.1, 0.1, 0.7],
-              repeat: Infinity,
-              repeatType: 'reverse'
-            }
+            transition: colorTransition
           }}
         />
       </h1>
-      <h2 className="font-mplus font-normal text-[#64ffda] inline-flex space-x-1.5 sm:mt-0.5 md:mt-1 text-[15px] sm:text-[20px] lg:text-xl">
-        <div>$ echo</div>
+      <h2 className="font-mplus font-normal text-[#64ffda] space-x-1.5 sm:mt-0.5 md:mt-1 text-[15px] sm:text-[20px] lg:text-xl">
         <Typewriter
           onInit={typewriter => {
             typewriter
               .pauseFor(2500)
-              .typeString('"what\'s up doc?"')
+              .typeString("what's up, doc?")
               .pauseFor(1500)
               .deleteAll()
-              .pauseFor(500)
-              .typeString('"my name is Om."')
+              .pauseFor(400)
+              .typeString('as you already know, my name is Om.')
               .pauseFor(1000)
               .deleteAll()
-              .pauseFor(500)
-              .typeString('"and yes... it\'s two letters long."')
+              .pauseFor(400)
+              .typeString("and yes... it's only two letters long.")
               .pauseFor(1000)
               .deleteAll()
-              .pauseFor(500)
-              .typeString('"i\'m a student."')
+              .pauseFor(400)
+              .typeString("i'm a student.")
               .pauseFor(1000)
               .deleteAll()
-              .pauseFor(500)
-              .typeString('"programmer."')
+              .pauseFor(400)
+              .typeString('programmer.')
               .pauseFor(1000)
               .deleteAll()
-              .pauseFor(500)
-              .typeString('"music connoisseur."')
+              .pauseFor(400)
+              .typeString('music connoisseur.')
               .pauseFor(1000)
               .deleteAll()
-              .pauseFor(500)
-              .typeString('"and an anime & k-drama enthusiast."')
+              .pauseFor(400)
+              .typeString('and an anime & k-drama enthusiast.')
               .pauseFor(1000)
               .deleteAll()
-              .pauseFor(500)
-              .typeString('"welcome to my page :)"')
+              .pauseFor(400)
+              .typeString('welcome to my page :)')
               .pauseFor(1000)
               .deleteAll()
               .start();
           }}
-          options={{ loop: true, deleteSpeed: 7, delay: 70 }}
+          options={{ loop: true, deleteSpeed: 12, delay: 55 }}
         />
       </h2>
     </motion.div>
