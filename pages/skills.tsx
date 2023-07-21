@@ -19,28 +19,52 @@ const Skills: React.FC = () => {
       transition={{ type: 'spring', stiffness: 600, damping: 10 }}
     >
       <p>
-        I have experience in front-end (and some back-end) development and
-        actively use React.js, usually with framework such as Next.js. I also
-        have experience using Node.js, Express.js, and working with MongoDB.
+        As a Computer Science major at the University of Wisconsin-Madison, I
+        have a solid foundation in object-oriented programming (OOP) and data
+        structures. Additionally, I have gained practical experience working
+        with databases and operating systems by having taken relevant courses
+        and applying that knowledge to various projects. Some of these projects
+        include implementing a SQLite page cache, a JSON parser for SQLite load
+        files, a simple shell, and a disk parser for an ext2 disk image.{' '}
+        <b>
+          You can find more of my projects, including the source code for this
+          website, on my{' '}
+          <motion.a
+            href="https://github.com/YonkoOm"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="text-[#64ffda] sm:inline-flex hover:text-[#bfdbfe]"
+            whileHover={{ scale: 1.03 }}
+          >
+            GitHub profile
+          </motion.a>
+        </b>
+        .
       </p>
       <p className="mt-2 md:mt-3">
-        Aside from fullstack development, I have a decent amount of experience
-        in software development and am knowledgeable in fundamentals such as OOP
-        and data structures. I also have experience with operating systems
-        through having taken a class and worked on projects such as a creating a
-        simple shell as well as a process scheduler using stride schedulle (both
-        written in C). I have also worked with xv6 to gain a further
-        understanding of how Unix and Unix-like operating systems work.
+        I also have a strong background in fullstack development. On the
+        frontend, I actively utilize frameworks/libraries such as
+        React.js/Next.js and SvelteKit. For backend development, I have
+        experience working with Node.js, Express.js, and MongoDB.
       </p>
       <p className="mt-2 md:mt-3">
-        Technologies I been working with as of late include:{' '}
+        Here are the technologies I have been working with as of late:{' '}
         <span className="text-[#64ffda]">
-          Java, C, Python, Rust, Javascript (ES6+), Typescript, HTML, CSS,
-          Node.js, React.js/Next.js, and Svelte.
+          Java, C, Python, Rust, Lua, SQL, JavaScript (ES6+), Typescript, HTML &
+          CSS, Node.js/Express.js, React.js/Next.js, and Svelte.
         </span>
       </p>
       <p className="mt-2 md:mt-3">
-        My resume and another place where I can be reached is on my{' '}
+        You can view my resume by clicking{' '}
+        <motion.a
+          href="/om-moradia-resume.pdf"
+          target="_blank"
+          className="text-[#64ffda] sm:inline-flex hover:text-[#bfdbfe]"
+          whileHover={{ scale: 1.03 }}
+        >
+          here
+        </motion.a>
+        , and connect with me on{' '}
         <motion.a
           href="https://www.linkedin.com/in/om-moradia-112133213/"
           target="_blank"
@@ -48,8 +72,9 @@ const Skills: React.FC = () => {
           className="text-[#64ffda] sm:inline-flex hover:text-[#bfdbfe]"
           whileHover={{ scale: 1.03 }}
         >
-          LinkedIn.
-        </motion.a>
+          LinkedIn
+        </motion.a>{' '}
+        for further contact.
       </p>
     </Section>
   );
