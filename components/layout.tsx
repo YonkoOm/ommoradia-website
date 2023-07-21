@@ -28,7 +28,7 @@ const Layout: React.FC<Props> = ({
       </Head>
       <motion.div initial="hidden" animate="enter" exit="exit">
         <motion.h1
-          className="w-fit font-varela font-bold text-[#64ffda]  text-[32px] md:text-[40px] leading-8 md:leading-none"
+          className="w-fit font-varela font-normal text-[#64ffda] text-[32px] md:text-[40px] leading-8 md:leading-none"
           {...additionalAnimations}
         >
           {header}
