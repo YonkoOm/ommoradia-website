@@ -47,7 +47,7 @@ const Home: React.FC = () => {
       <Head>
         <title>Om Moradia - Homepage</title>
       </Head>
-      <h1 className="font-coolvetica font-normal text-[28px] sm:text-[36px] md:text-[40px] lg:text-5xl leading-tight lg:leading-[53px]">
+      <h1 className="font-coolvetica font-normal text-[28px] sm:text-[36px] md:text-[40px] lg:text-[52px] leading-tight lg:leading-[57px]">
         <AnimatedText
           text={topLine}
           delay={baseDelay}
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
           }}
         />
       </h1>
-      <h2 className="font-mplus font-normal text-[#64ffda] space-x-1.5 sm:mt-0.5 md:mt-1 text-[15px] sm:text-[20px] lg:text-xl">
+      <h2 className="font-mplus font-normal text-[#64ffda] space-x-1.5 sm:mt-0.5 md:mt-1 text-[15px] sm:text-[20px] lg:text-[21px]">
         <Typewriter
           onInit={typewriter => {
             typewriter
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
               .deleteAll()
               .start();
           }}
-          options={{ loop: true, deleteSpeed: 12, delay: 55 }}
+          options={{ loop: true, deleteSpeed: 10, delay: 60 }}
         />
       </h2>
     </motion.div>
