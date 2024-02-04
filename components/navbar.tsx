@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -15,6 +16,41 @@ import MobileMenu from './mobile-menu';
 import { mplus } from '@/fonts';
 
 const Navbar: React.FC = () => {
+  const internalLinks = [
+    {
+      name: 'HOME',
+      path: '/',
+      icon: faHome
+    },
+    {
+      name: 'ABOUT',
+      path: '/about',
+      icon: faCircleUser
+    },
+    {
+      name: 'SKILLS',
+      path: '/skills',
+      icon: faGear
+    }
+  ];
+  const externalLinks = [
+    {
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/om-moradia-112133213/',
+      icon: faLinkedin
+    },
+    {
+      name: 'GitHub',
+      href: 'https://github.com/YonkoOm',
+      icon: faGithub
+    },
+    {
+      name: 'Email',
+      href: 'mailto:moradia@wisc.edu',
+      icon: faEnvelope
+    }
+  ];
+
   return (
     <div className="w-full md:w-[60px] h-12 md:h-full md:min-h-screen absolute bg-black/30 md:bg-black/60 backdrop-blur-[10px] select-none z-30">
       <Link
@@ -40,59 +76,33 @@ const Navbar: React.FC = () => {
         </div>
       </Link>
       <nav className="hidden md:block absolute w-full text-center leading-[51px] top-[50%] -mt-[110px]">
-        <NavLink
-          href="/"
-          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-700 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['HOME'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[1.75px]"
-        >
-          <FontAwesomeIcon icon={faHome} className="group-hover:opacity-40" />
-        </NavLink>
-        <NavLink
-          href="/about"
-          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-700 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['ABOUT'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[1.75px]"
-        >
-          <FontAwesomeIcon
-            icon={faCircleUser}
-            className="group-hover:opacity-40"
-          />
-        </NavLink>
-        <NavLink
-          href="/skills"
-          className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-700 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-['SKILLS'] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[1.75px]"
-        >
-          <FontAwesomeIcon icon={faGear} className="group-hover:opacity-40" />
-        </NavLink>
+        {internalLinks.map(link => (
+          <NavLink
+            key={link.name}
+            href={link.path}
+            afterText={link.name}
+            className="group text-[#fff7ed] relative block text-[22px] no-underline after:transition-all after:duration-700 after:ease-out after:opacity-0 hover:after:opacity-100 after:content-[attr(after-text)] after:text-[9px] after:text-[#64ffda] after:absolute after:block after:bottom-0 after:w-full after:text-center after:tracking-[1.75px]"
+          >
+            <FontAwesomeIcon
+              icon={link.icon}
+              className="group-hover:opacity-40"
+            />
+          </NavLink>
+        ))}
       </nav>
       <ul className="hidden absolute md:block w-full bottom-10 m-0 p-0 text-lg list-none text-center">
-        <li>
-          <a
-            href="https://www.linkedin.com/in/om-moradia-112133213/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 py-2"
-          >
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/YonkoOm"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 py-2"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        </li>
-        <li>
-          <a
-            href="mailto:moradia@wisc.edu"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 py-2"
-          >
-            <FontAwesomeIcon icon={faEnvelope} />
-          </a>
-        </li>
+        {externalLinks.map(link => (
+          <li key={link.name}>
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="block text-[#64ffda] hover:text-[#fff7ed] leading-5 py-2"
+            >
+              <FontAwesomeIcon icon={link.icon} />
+            </a>
+          </li>
+        ))}
       </ul>
       <MobileMenu />
     </div>

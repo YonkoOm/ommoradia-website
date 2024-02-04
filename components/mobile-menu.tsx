@@ -104,6 +104,38 @@ const HamburgerMenu: React.FC<Props> = ({ isOpen, ...props }) => {
 const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const internalLinks = [
+    {
+      name: 'Home',
+      path: '/'
+    },
+    {
+      name: 'About',
+      path: '/about'
+    },
+    {
+      name: 'Skills',
+      path: '/skills'
+    }
+  ];
+  const externalLinks = [
+    {
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/om-moradia-112133213/',
+      icon: faLinkedin
+    },
+    {
+      name: 'GitHub',
+      href: 'https://github.com/YonkoOm',
+      icon: faGithub
+    },
+    {
+      name: 'Email',
+      href: 'mailto:moradia@wisc.edu',
+      icon: faEnvelope
+    }
+  ];
+
   const menu: Variants = {
     initial: { opacity: 0, rotateX: 90 },
     enter: { opacity: 1, rotateX: 0 },
@@ -113,7 +145,7 @@ const MobileMenu: React.FC = () => {
       transition: { duration: 0.3, ease: 'easeIn' }
     }
   };
-  const link: Variants = {
+  const linkVariant: Variants = {
     initial: { opacity: 0 },
     enter: { opacity: 1 },
     exit: { opacity: 0 }
@@ -123,8 +155,6 @@ const MobileMenu: React.FC = () => {
 
   const liveLinkStyle =
     "after:absolute after:w-[1.5px] after:h-full after:left-0 after:bg-gradient-to-b after:from-transparent after:via-[#64ffda] after:content-['']";
-
-  const closeMenu = () => setIsOpen(false);
 
   return (
     <div className="md:hidden inline-block float-right mr-2 mt-1.5">
@@ -151,65 +181,36 @@ const MobileMenu: React.FC = () => {
             className="absolute right-2 mt-1.5 text-center text-[#fff7ed] text-[15px] font-varela leading-8 w-44 rounded-s-md bg-gray-900 shadow-depth"
           >
             <nav>
-              <motion.div onClick={closeMenu} variants={link}>
-                <NavLink
-                  href="/"
-                  className="block relative rounded-md hover:bg-slate-800"
-                  pathStyling={liveLinkStyle}
+              {internalLinks.map(link => (
+                <motion.div
+                  key={link.name}
+                  onClick={() => setIsOpen(false)}
+                  variants={linkVariant}
                 >
-                  Home
-                </NavLink>
-              </motion.div>
-              <motion.div onClick={closeMenu} variants={link}>
-                <NavLink
-                  href="/about"
-                  className="block relative rounded-md hover:bg-slate-800"
-                  pathStyling={liveLinkStyle}
-                >
-                  About
-                </NavLink>
-              </motion.div>
-              <motion.div onClick={closeMenu} variants={link}>
-                <NavLink
-                  href="/skills"
-                  className="block relative rounded-md hover:bg-slate-800"
-                  pathStyling={liveLinkStyle}
-                >
-                  Skills
-                </NavLink>
-              </motion.div>
+                  <NavLink
+                    href={link.path}
+                    className="block relative rounded-md hover:bg-slate-800"
+                    pathStyling={liveLinkStyle}
+                  >
+                    {link.name}
+                  </NavLink>
+                </motion.div>
+              ))}
             </nav>
             <div className="text-center text-base">
-              <a
-                href="https://www.linkedin.com/in/om-moradia-112133213/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <FontAwesomeIcon
-                  icon={faLinkedin}
-                  className="text-[#64ffda] hover:text-[#fff7ed] py-0.5 px-1.5"
-                />
-              </a>
-              <a
-                href="https://github.com/YonkoOm"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="text-[#64ffda] hover:text-[#fff7ed] py-0.5 px-1.5"
-                />
-              </a>
-              <a
-                href="mailto:moradia@wisc.edu"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  className="text-[#64ffda] hover:text-[#fff7ed] py-0.5 px-1.5"
-                />
-              </a>
+              {externalLinks.map(link => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <FontAwesomeIcon
+                    icon={link.icon}
+                    className="text-[#64ffda] hover:text-[#fff7ed] py-0.5 px-1.5"
+                  />
+                </a>
+              ))}
             </div>
           </motion.div>
         )}
