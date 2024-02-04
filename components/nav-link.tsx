@@ -6,6 +6,7 @@ interface Props {
   href: string;
   className?: string;
   pathStyling?: string;
+  afterText?: string;
   children: React.ReactNode;
 }
 
@@ -13,15 +14,17 @@ const NavLink: React.FC<Props> = ({
   href,
   className: styling,
   pathStyling,
+  afterText,
   children
 }) => {
   const pathname = usePathname();
   return (
     <Link
       href={href}
+      after-text={afterText}
       className={
-        href === pathname && styling && pathStyling
-          ? styling.concat(' ', pathStyling)
+        href === pathname && pathStyling
+          ? styling?.concat(' ', pathStyling)
           : styling
       }
       style={{
