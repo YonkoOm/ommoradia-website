@@ -26,7 +26,7 @@ const Skills: React.FC = () => {
         and applying that knowledge to various projects. Some of these projects
         include implementing a SQLite page cache, a JSON parser for SQLite load
         files, a simple shell, and a disk parser for an ext2 disk image.{' '}
-        <b>
+        <strong>
           You can find more of my projects, including the source code for this
           website, on my{' '}
           <motion.a
@@ -38,7 +38,7 @@ const Skills: React.FC = () => {
           >
             GitHub profile
           </motion.a>
-        </b>
+        </strong>
         .
       </p>
       <p className="mt-2 md:mt-3">
