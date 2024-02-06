@@ -21,7 +21,7 @@ const Layout: React.FC<Props> = ({
   };
 
   return (
-    <div className="absolute w-[85%] md:w-[70%] lg:w-[40%] my-0 mx-auto top-36 md:top-[30%] left-[10%] z-10">
+    <div className="absolute w-[85%] md:w-[70%] lg:w-[45%] xxl:w-[35%] my-0 mx-auto top-36 md:top-[50%] md:-translate-y-[50%] left-[10%] z-10">
       <Head>
         <title>{title}</title>
         <meta property="og:title" content={title} />
