@@ -35,7 +35,7 @@ const Website = ({ Component, pageProps, router }: AppProps) => {
       <main
         className={`${mplus.variable} ${coolvetica.variable} ${varela.variable} ${lato.variable}`}
       >
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence mode="wait">
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </main>
