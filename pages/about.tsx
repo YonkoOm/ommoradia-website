@@ -62,7 +62,7 @@ const About: React.FC = () => {
         In my free time, and aside from coding, I enjoy trying different types
         of foods, watching anime and Korean dramas, and listening to music. I
         also enjoy reading the news, especially anything related to science and
-        the international world, and keeping up with what&apos;s going on in the
+        the medical field, and keeping up with what&apos;s going on in the
         everchanging programming world.
       </p>
     </Section>

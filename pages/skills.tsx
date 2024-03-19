@@ -55,7 +55,7 @@ const Skills: React.FC = () => {
         </span>
       </p>
       <p className="mt-2 md:mt-3">
-        You can view my resume by clicking{' '}
+        You can view my resume{' '}
         <motion.a
           href="/om-moradia-resume.pdf"
           target="_blank"

@@ -153,13 +153,10 @@ const MobileMenu: React.FC = () => {
 
   const bgColor = isOpen ? 'bg-[#1e2057]' : 'bg-[#0f102a] hover:bg-[#101840]';
 
-  const liveLinkStyle =
-    "after:absolute after:w-[1.5px] after:h-full after:left-0 after:bg-gradient-to-b after:from-transparent after:via-[#64ffda] after:content-['']";
-
   return (
     <div className="md:hidden inline-block float-right mr-2 mt-1.5">
       <motion.div
-        className={`px-1.5 py-0.5 border ${bgColor} rounded-md border-blue-500 shadow shadow-gray-400 cursor-pointer select-none`}
+        className={`px-1.5 py-0.5 ${bgColor} rounded-md border border-blue-500 shadow shadow-gray-400 cursor-pointer select-none`}
         onClick={() => setIsOpen(isOpen => !isOpen)}
         whileHover="hover"
       >
@@ -178,7 +175,7 @@ const MobileMenu: React.FC = () => {
               delayChildren: 0.15,
               staggerChildren: 0.175
             }}
-            className="absolute right-2 mt-1.5 text-center text-[#fff7ed] text-[15px] font-varela leading-8 w-44 rounded-s-md bg-gray-900 shadow-depth"
+            className="absolute right-2 mt-1.5 text-center text-[#fff7ed] text-[15px] font-varela leading-8 w-44 rounded-s-md bg-gray-900"
           >
             <nav>
               {internalLinks.map(link => (
@@ -190,7 +187,7 @@ const MobileMenu: React.FC = () => {
                   <NavLink
                     href={link.path}
                     className="block relative rounded-md hover:bg-slate-800"
-                    pathStyling={liveLinkStyle}
+                    pathStyling="after:absolute after:w-[1.5px] after:h-full after:left-0 after:bg-gradient-to-b after:from-transparent after:via-[#64ffda] after:content-['']"
                   >
                     {link.name}
                   </NavLink>

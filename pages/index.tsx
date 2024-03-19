@@ -15,17 +15,16 @@ const Home: React.FC = () => {
   const letterHover: Variant = {
     scale: 1.2
   };
-
   const letterTap: Variant = {
     scale: 0.7
   };
-
   const letterTransition: Transition = {
     type: 'spring',
     stiffness: 500,
     damping: 8
   };
 
+  const colors = ['#fcdff5', '#9bb3fa', '#ffca28'];
   const colorTransition: Transition = {
     delay: 1,
     duration: 5.5,
@@ -71,7 +70,7 @@ const Home: React.FC = () => {
             whileTap={letterTap}
             transition={letterTransition}
             letterAnimation={{
-              color: ['#fcdff5', '#9bb3fa', '#ffca28'],
+              color: colors,
               transition: colorTransition
             }}
           />
@@ -90,7 +89,7 @@ const Home: React.FC = () => {
             whileTap={letterTap}
             transition={letterTransition}
             letterAnimation={{
-              color: ['#ffca28', '#9bb3fa', '#fcdff5'],
+              color: colors.toReversed(),
               transition: colorTransition
             }}
           />
